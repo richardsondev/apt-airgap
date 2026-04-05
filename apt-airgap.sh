@@ -8,10 +8,9 @@ USB_PATH="/mnt/external"  # Path where USB is mounted
 REPO="http://archive.ubuntu.com/ubuntu"
 
 # Use debmirror to download the repository
-debmirror --no-check-gpg \
-          --host=archive.ubuntu.com \
+debmirror --host=archive.ubuntu.com \
           --root=ubuntu \
-          --method=http \
+          --method=https \
           --progress \
           --dist="${UBUNTU_DISTRO},${UBUNTU_DISTRO}-updates,${UBUNTU_DISTRO}-backports,${UBUNTU_DISTRO}-security" \
           --section=main,restricted,universe,multiverse \
